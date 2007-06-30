@@ -1,0 +1,23 @@
+--- o.yasr-0.6.7/configure.in	2005-01-28 13:49:09.000000000 +0100
++++ n.yasr-0.6.7/configure.in	2007-06-30 23:01:09.883801464 +0200
+@@ -42,15 +42,15 @@
+   AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/${DATADIRNAME}/locale")
+ fi
+ 
+-dnl Set PACKAGE_DATA_DIR in config.h.
+-if test "x${datadir}" = 'x${prefix}/share'; then
++dnl Set PACKAGE_DATA_DIR in config.h.
++if test "x${sysconfdir}" = 'x${prefix}/etc'; then
+   if test "x${prefix}" = "xNONE"; then
+-    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/share/${PACKAGE}")
++    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${ac_default_prefix}/etc",)
+   else
+-    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/share/${PACKAGE}")
++    AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${prefix}/etc",)
+   fi
+ else
+-  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${datadir}/${PACKAGE}")
++  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${sysconfdir}",)
+ fi
+ 
+ AC_CANONICAL_HOST

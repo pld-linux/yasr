@@ -1,0 +1,12 @@
+diff -Nur o.yasr-0.6.7/Makefile.am n.yasr-0.6.7/Makefile.am
+--- o.yasr-0.6.7/Makefile.am	2003-12-08 04:55:26.000000000 +0100
++++ n.yasr-0.6.7/Makefile.am	2007-06-30 22:18:18.704387639 +0200
+@@ -10,7 +10,7 @@
+ m4 \
+ 	po
+ 
+-pkgdata_DATA = \
++sysconf_DATA = \
+ 	yasr.conf
+ 
+ EXTRA_DIST = \

@@ -1,0 +1,12 @@
+--- o.yasr-0.6.7/yasr.conf	2004-11-18 13:02:03.000000000 +0100
++++ n.yasr-0.6.7/yasr.conf	2007-06-30 22:34:51.892120547 +0200
+@@ -59,7 +59,8 @@
+ #synthesizer port=S0
+ #synthesizer port=l0
+ #synthesizer port=127.0.0.1:2222
+-synthesizer port=|/usr/local/bin/eflite
++synthesizer port=|/usr/bin/eflite
++#synthesizer port=|/usr/bin/espeak
+ key echo=off
+ shell=/bin/bash
+ special=off
