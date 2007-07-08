@@ -35,7 +35,25 @@ it believes to be on the screen. It thus does not use any features
 specific to Linux and can be ported to other Unix-like operating
 systems without too much trouble.
 
-#%%description -l pl.UTF-8
+%description -l pl.UTF-8
+Yasr to czytnik ekranu ogólnego przeznaczenia dla Linuksa i innych
+uniksowych systemów operacyjnych. Nazwa "yasr" to skrót oznaczający
+"Yet Another Screen Reader" (jeszcze jeden czytnik ekranu) albo
+"Your All-purpose Screen Reader" (Twój czytnik ekranu dowolnego
+zastosowania) - można wybrać dowolny z nich. Obsługuje wiele
+syntezatorów mowy, choć obecnie z niektórymi są pewne problemy.
+Aktualnie yasr próbuje obsługiwać Speak-out, DEC-talk, BNS, Apollo
+i DoubleTalk. Może także komunikować się z serwerami Emacspeak, dzięki
+czemu może być używany z syntezatorami nie obsługiwanymi bezpośrednio,
+takimi jak Festival Lite (poprzez eflite) czy FreeTTS. Jest na tyle
+mały, by w razie potrzeby zmieścić się na głównym dysku (o ile nie
+potrzebny jest serwer Emacspeak). Jest napisany w C i działa
+poprzez otwarcie pseudoterminala, uruchomienie powłoki i
+przechwytywanie całego wejścia i wyjścia. Wyszukuje wysyłane sekwencje
+sterujące i utrzymuje wirtualne "okno" zawierające wszystko co uważa
+za wyświetlone na ekranie. W ten sposób nie wykorzystuje niczego
+specyficznego dla Linuksa, więc może być bez większych problemów
+przenoszony na inne uniksowe systemy operacyjne.
 
 %prep
 %setup -q
