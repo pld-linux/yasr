@@ -1,15 +1,15 @@
 Summary:	Yet another screen reader
 Summary(pl.UTF-8):	Jeszcze jeden screen reader
 Name:		yasr
-Version:	0.6.7
+Version:	0.6.9
 Release:	1	
 License:	GPL v2
 Group:		Applications
 Source0:	http://dl.sourceforge.net/yasr/%{name}-%{version}.tar.gz
-# Source0-md5:	c7c6191f1d7413317924e580809817dc
+# Source0-md5:	daec224676fb2db5a1936b399f559473
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-conf_settings.patch
-Patch2:		%{name}-conf_path.patch
+Patch2:		%{name}-gcc43.patch
 URL:		http://yasr.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -76,10 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS CREDITS ChangeLog NEWS README TODO
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/yasr.conf
