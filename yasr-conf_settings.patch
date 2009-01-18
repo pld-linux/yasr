@@ -1,26 +1,28 @@
---- o.yasr-0.6.7/yasr.conf	2004-11-18 13:02:03.000000000 +0100
-+++ n.yasr-0.6.7/yasr.conf	2007-06-30 22:34:51.892120547 +0200
-@@ -59,7 +59,8 @@
- #synthesizer port=S0
- #synthesizer port=l0
- #synthesizer port=127.0.0.1:2222
--synthesizer port=|/usr/local/bin/eflite
-+synthesizer port=|/usr/bin/eflite
-+#synthesizer port=|/usr/bin/espeak
- key echo=off
- shell=/bin/bash
- special=off
---- yasr-0.6.7/yasr/yasr.1.orig	2007-07-01 00:53:57.000000000 +0200
-+++ yasr-0.6.7/yasr/yasr.1	2007-07-01 00:58:02.000000000 +0200
-@@ -213,8 +213,9 @@
+diff -burNp yasr-0.6.9/yasr/yasr.1 yasr-0.6.9-dud/yasr/yasr.1
+--- yasr-0.6.9/yasr/yasr.1	2002-12-08 05:22:37.000000000 +0100
++++ yasr-0.6.9-dud/yasr/yasr.1	2009-01-18 16:59:35.917665371 +0100
+@@ -213,8 +213,9 @@ is silent and ignores all keys when disa
  Note: this key is defined in the [options] section as "DisableKey"
  .SH FILES
  .TP
 -.I /usr/local/share/yasr/yasr.conf
-+.I /etc/yasr.conf 
++.I /etc/yasr.conf
 +.I ~/.yasr.conf
  .I yasr
 -configuration file.
 +configuration files
  .SH AUTHOR
  Michael P. Gorse <mgorse@users.sourceforge.net>
+diff -burNp yasr-0.6.9/yasr.conf yasr-0.6.9-dud/yasr.conf
+--- yasr-0.6.9/yasr.conf	2008-01-31 14:01:50.000000000 +0100
++++ yasr-0.6.9-dud/yasr.conf	2009-01-18 16:57:44.407052211 +0100
+@@ -59,7 +59,8 @@ synthesizer=emacspeak server
+ #synthesizer=speech dispatcher
+ #synthesizer port=S0
+ #synthesizer port=l0
+-synthesizer port=|/usr/local/bin/eflite
++synthesizer port=|/usr/bin/eflite
++synthesizer port=|/usr/bin/espeak
+ # Below line appropriate for Speech Dispatcher in its default configuration
+ #synthesizer port=127.0.0.1:6560
+ key echo=off
