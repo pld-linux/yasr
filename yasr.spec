@@ -2,7 +2,7 @@ Summary:	Yet another screen reader
 Summary(pl.UTF-8):	Jeszcze jeden screen reader
 Name:		yasr
 Version:	0.6.9
-Release:	1	
+Release:	2
 License:	GPL v2
 Group:		Applications
 Source0:	http://dl.sourceforge.net/yasr/%{name}-%{version}.tar.gz
